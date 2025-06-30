@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>navbar Dos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="logo">
+      <img src="img/PcLogo.png" alt="Logo de la marca">
+    </div>
+    <nav>
+      <ul class="nav-links"> <!--Una lista desordenada es lo mas recomendable para la navbar-->
+        <li><a href="#">Home</a></li>
+        <li><a href="#productos">Productos</a></li> <!-- uso referencias para navegar dendro de la pagina web}-->
+        <li><a href="#contacto">About</a></li>
+      </ul>
+    </nav>
+    <a class="btn" id="btn-contacto" href="#contacto"><button>Contacto</button></a> <!-- un boton para llevar al formulario contacto-->
+  </header>
+
+  <main>
+
+   <section class="hero"> <!-- reutilice partes del main visto en clase que me parecio atractivo-->
+      <img src="img/PcLogo.png" alt="PcGamers">
+      <div class="hero-content">
+        <h3>¡Super OFERTAS!</h3>
+        <h2>En todos los productos</h2>
+        <h1>EL FUTURO A TU ALCANCE<h1>
+        <p>¡La tecnología del mañana a un clik!</p>
+       <!--<button onclick="location.href='#contacto'">Comprar</button>--> 
+      </div>
+    </section>
+
+    <!-- inserto las tarjetas a cargar dinamicamente con Js -->
+
+  <div class="lista-productos" id="contenedorListaProductos"></div>
+
+    <div class="btn-ver-carrito">
+        <a href="carrito.html">Ver Carrito</a>
+    </div>
+
+    <script src="index3.js"></script>
+    
+ <!-- se insertaron las tarjetas dinamicamente con Js -->
+  
+  </main>
+
+<footer class="footer" id="footer">
+  <div class="redes-sociales">
+    <a href="#" target="_blank" class="btn-facebook"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#" target="_blank" class="btn-whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+    <button id="abrir-formulario">Contacto</button>
+  </div>
+</footer>
+
+<div id="formulario-emergente" class="formulario-emergente">
+  <div class="contenido-formulario">
+    <h2>Contacto</h2>
+    <form action="https://formspree.io/f/mwpojerd" method="post">
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+      <div>
+        <label for="email">e-mail :</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" required></textarea>
+      </div>
+      <button type="submit">Enviar</button>
+      <button type="button" id="cancelar-formulario">Cancelar</button>
+    </form>
+  </div>
+</div>
+
+
+</body>
+</html>

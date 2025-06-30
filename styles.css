@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: #202020;
+  font-family: 'Nunito', sans-serif;
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #1b3039;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 65px;
+  padding: 5px 10%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.header .logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.header .logo img {
+  height: 60px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+.header .logo img:hover {
+  transform: scale(1.2);
+}
+
+.header .nav-links {
+  list-style:none;
+  padding: 6 12px;
+}
+
+.header .nav-links li {
+  font-size: 16px;
+  display:inline-flex;
+  padding: 0 20px;
+}
+
+.header .nav-links li:hover {
+  transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-weight: 700;
+  color: #eceff1;
+  text-decoration: none;
+}
+
+.header .nav-links li a:hover {
+  color: #ffbc0e;
+}
+
+.header .btn button {
+  margin-left: 10px;
+  margin-right: 0px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1b3039;
+  padding: 9px 15px;
+  background: #eceff1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover {
+  background-color: #e2f1f8;
+  color: #ffbc0e;
+  transform: scale(1.1);
+}
+
+.hero {
+  position: relative;
+  padding-bottom: 56.25%; /* proporción 16:9 */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+  .hero img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+}
+
+
+.hero-content {
+
+  position: absolute;
+  padding: 20px;
+  top: 65%;
+  right: 50px; /* ajusta la posición según sea necesario */
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+.hero-content button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.hero-content h1 {
+  font-size: 96px;
+  margin-bottom: 10px;
+  color: rgb(255, 255, 255);
+  text-shadow: 
+  -4px 0 red, 
+  0 4px red, 
+  4px 0 red, 
+  0 -4px red;
+
+}
+
+.hero-content h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+  text-shadow: 
+  -1px 0 blue, 
+  0 1px blue, 
+  1px 0 blue, 
+  0 -1px blue;
+
+}
+
+.hero-content h3 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+  text-shadow: 
+  -1px 0 blue, 
+  0 1px blue, 
+  1px 0 blue, 
+  0 -1px blue;
+
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+    text-shadow: 
+  -2px 0 blue, 
+  0 2px blue, 
+  2px 0 blue, 
+  0 -2px blue;
+
+}
+
+/*TARJETAS Y ARRITO*/
+
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.item-producto {
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.btn-ver-carrito {
+    display: block;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn-ver-carrito a {
+    background-color: #008CBA;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-ver-carrito a:hover {
+    opacity: 0.8;
+}
+
+.item-producto h2 {
+   font-size: 18px;
+   color: rgb(255, 255, 255);
+}
+
+.item-producto p {
+   font-size: 16px;
+   color: rgb(241, 243, 107);
+}
+
+
+.item-producto img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin-bottom: 10px;
+}
+
+.item-producto img:hover{
+  transform: scale(1.2);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  background-color: #000;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.redes-sociales {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+
+.redes-sociales a, .redes-sociales button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  color: #fff;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: #fff;
+}
+
+#abrir-formulario {
+  background-color: #333;
+  color: #fff;
+}
+
+.formulario-emergente {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-formulario {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*******************************************************************************************************/
+
+/* Media query para PC de escritorio */
+@media (min-width: 1367px) {
+ }
+
+/* Media query resolución media */
+@media (max-width: 1366px) and (min-width: 922px) {
+
+  .hero-content {
+    right: 20px;
+  }
+   .hero-content h1 {
+    font-size: 64px;
+    margin-bottom: 10px;
+  }
+
+  .hero-content h2 {
+  font-size: 32px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }
+
+.hero-content h3 {
+  font-size: 32px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+}
+
+/* Media query para móviles */
+@media (max-width: 921px) {
+
+  .hero-content {
+    right: 10px;
+    top: 45%;
+  }
+  .hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+
+  .hero-content h2 {
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+ }
+
+.hero-content h3 {
+  font-size: 18px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+}
+
+/* Media query para móviles pequeños */
+@media (max-width: 480px) {
+  .header {
+    padding: 5px 1%;
+  }
+
+  .header .btn button {
+  margin-left: 5px;
+  margin-right: 0px;
+  font-size: 10px;
+  padding: 6px 12px;
+  }
+
+  .hero-content {
+    right: 5px;
+    top: 35%;
+  }
+
+  .hero-content h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+      text-shadow: 
+  -2px 0 red, 
+  0 2px red, 
+  2px 0 red, 
+  0 -2px red;
+  }
+
+  .hero-content h2 {
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+ }
+
+.hero-content h3 {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.hero-content p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+  .hero-content button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+}
