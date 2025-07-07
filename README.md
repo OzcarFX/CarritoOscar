@@ -1,6 +1,9 @@
 PROYECTO FINAL E-COMMERCE
+
 Programa Educativo: TALENTO TECH
+
 Alumno: Oscar Horacio
+
 Curso: Front End
 
 Descripción del Proyecto
