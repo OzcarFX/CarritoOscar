@@ -30,13 +30,18 @@ body {
 
 /* Estilos para los botones */
 button {
-    background-color: #f44336;
+    background-color: #b61d1d;
     color: white;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
     margin-top: 20px;
 }
+
+#btnPagar {
+  background-color: #4CAF50;
+}
+
 
 button:hover {
     opacity: 0.8;
@@ -75,13 +80,6 @@ button:hover {
 .volver-a-tienda a:hover {
     opacity: 0.8;
 }
-/*
-.item-producto img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}*/
 
 .item-carrito {
   display: flex;

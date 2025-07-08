@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>navbar Dos</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <title>Proyecto Final Oscar Nagy</title>
   <link rel="stylesheet" href="styles.css">
 
 </head>
@@ -20,8 +19,8 @@
     <nav>
       <ul class="nav-links"> <!--Una lista desordenada es lo mas recomendable para la navbar-->
         <li><a href="#">Home</a></li>
-        <li><a href="#productos">Productos</a></li> <!-- uso referencias para navegar dendro de la pagina web}-->
-        <li><a href="#contacto">About</a></li>
+        <li><a href="#contenedorListaProductos">Productos</a></li> <!-- uso referencias para navegar dendro de la pagina web}-->
+        <li><a id="about" href="#">About</a></li>
       </ul>
     </nav>
     <a class="btn" id="btn-contacto" href="#contacto"><button>Contacto</button></a> <!-- un boton para llevar al formulario contacto-->
@@ -62,6 +61,20 @@
   </div>
 </footer>
 
+
+    <!-- La sección para el README que se verá en una ventana emergente tocando "About" en la barra de navegación -->
+    <div id="readme-emergente" class="readme-overlay">
+        <div class="readme-content">
+            <h2>Acerca de este Proyecto (README.md)</h2>
+            <div id="readme-container" class="readme-container">
+                <div class="readme-box" id="loading-message">Cargando contenido...</div>
+            </div>
+            <button id="botonCerrar" class="close-button">Cerrar</button>
+        </div>
+    </div>
+
+
+<!-- formulario con fromspree que se verá en una ventana emergente tocando el botón "contacto"-->
 <div id="formulario-emergente" class="formulario-emergente">
   <div class="contenido-formulario">
     <h2>Contacto</h2>

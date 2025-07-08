@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css');
 
 * {
   box-sizing: border-box;
@@ -299,6 +300,91 @@ button:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+/*************************README EMERGENTE**************************************************************/
+.readme-overlay {
+    display: none; /* Inicialmente oculto */
+    position: fixed; /* Fijo en la ventana del navegador */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    padding: 20px; /* Espacio alrededor del contenido en pantallas pequeñas */
+    box-sizing: border-box; /* Incluye padding en el ancho/alto */
+}
+
+/* Estilos para el contenido de la ventana emergente */
+.readme-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 800px; /* Ancho máximo para el contenido */
+    width: 90%; /* Ancho responsivo */
+    max-height: 80vh; /* Altura máxima para el contenido (80% del viewport height) */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+    position: relative;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre elementos dentro del contenido */
+}
+
+.readme-content h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0; /* Ajustado para usar gap */
+    text-align: center;
+    font-size: 1.8em;
+}
+
+/* Estilos para el contenedor del README */
+.readme-container {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    white-space: pre-wrap; /* Mantiene los saltos de línea y espacios del Markdown */
+    font-family: 'Inter', sans-serif; /* Usando Inter como se recomienda */
+    color: #555;
+    line-height: 1.6;
+    font-size: 1em;
+    flex-grow: 1; /* Permite que el contenedor del README crezca */
+}
+
+/* Estilos para el mensaje de carga */
+#loading-message {
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+    color: #888;
+    display: none; /* Oculto por defecto, se muestra con JS */
+}
+
+/* Estilos para el botón de cerrar */
+.close-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 10px; /* Ajustado para usar gap */
+    display: block; /* Ocupa todo el ancho */
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
 /*******************************************************************************************************/
 
 /* Media query para PC de escritorio */

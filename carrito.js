@@ -5,16 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const elementoTotalCarrito = document.getElementById('totalCarrito');
     const botonVaciarCarrito = document.getElementById('btnVaciarCarrito');
 
-    // --- Explicación sobre JSON.stringify() y JSON.parse() ---
-    // localStorage solo puede almacenar cadenas de texto (strings).
-    // Si queremos guardar objetos o arrays (como nuestro carrito),
-    // necesitamos convertirlos a un string. Para esto, usamos JSON.stringify().
-    //
-    // Cuando recuperamos el string de localStorage, necesitamos convertirlo
-    // de nuevo a un objeto o array de JavaScript para poder trabajar con él.
-    // Para esto, usamos JSON.parse().
-    // -----------------------------------------------------------
-
     function renderizarCarrito() {
         let carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
         contenedorElementosCarrito.innerHTML = '';
@@ -27,23 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // *** USANDO TEMPLATE STRINGS PARA CONSTRUIR EL HTML DE LOS ÍTEMS ***
-        /*
-        const itemsHtml = carrito.map(item => {
-            // total = total + item.precio * item.cantidad
-            total += item.precio * item.cantidad; // Acumular el total
-
-            return `
-                        <div class="item-carrito">
-                            <span>${item.nombre} (x${item.cantidad})</span>
-                            <div>
-                                <span>$${(item.precio * item.cantidad).toFixed(2)}</span>
-                                <button class="btn-eliminar-item" id="btn-eliminar-${item.id}">Eliminar</button>
-                            </div>
-                        </div>
-                    `;
-        });*/
-// modificaciones para colocar imagen de los productos al carrito
-
+        
 const itemsHtml = carrito.map(item => {
   total += item.precio * item.cantidad;
 
@@ -65,10 +39,6 @@ const itemsHtml = carrito.map(item => {
         contenedorElementosCarrito.innerHTML = itemsHtml.join('');
         elementoTotalCarrito.textContent = `Total: $${total.toFixed(2)}`;
 
-        // *** Adjuntar eventos DESPUÉS de que el HTML está en el DOM ***
-        // Iteramos sobre el array 'carrito' original para adjuntar eventos,
-        // usando el ID generado para encontrar cada botón.
-        // los botones de eliminar se crean y se destruyen dinámicamente cada vez que el carrito se renderiza (es decir, cuando se agrega, elimina o vacía un producto).
         carrito.forEach(item => {
             const botonEliminar = document.getElementById(`btn-eliminar-${item.id}`);
             if (botonEliminar) { // Asegurarse de que el botón exista
@@ -82,7 +52,6 @@ const itemsHtml = carrito.map(item => {
         function eliminarProductoDelCarrito(idProducto) {
             let carrito = JSON.parse(localStorage.getItem('carritoDeCompras')) || [];
 
-            //carrito.map().filter()
             const carritoActualizado = carrito.map(item => {
                 if (item.id === idProducto) {
                     // Creamos un nuevo objeto con las propiedades exactas que necesitamos.
@@ -113,6 +82,13 @@ const itemsHtml = carrito.map(item => {
         alert('El carrito ha sido vaciado.');
     });
 
+    const botonPagar = document.getElementById('btnPagar');
+
+  botonPagar.addEventListener('click', () => {
+    alert('En construcción');
+    localStorage.removeItem('carritoDeCompras');
+    window.location.href = 'index.html';
+  });
 
 
 })
