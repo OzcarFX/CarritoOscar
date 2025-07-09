@@ -173,7 +173,7 @@ body {
 
 }
 
-/*TARJETAS Y ARRITO*/
+/*TARJETAS Y CARRITO*/
 
 .lista-productos {
     display: grid;
@@ -230,7 +230,7 @@ button:hover {
 
 
 .item-producto img {
-  width: 200px;
+  width: 180px;
   height: 150px;
   object-fit: cover;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
